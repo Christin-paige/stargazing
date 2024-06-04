@@ -68,7 +68,9 @@ img {
     */
     width: 100%;
     height: auto;
-    size: cover;
+    background-image: cover;
+
+    
 }
 
 
