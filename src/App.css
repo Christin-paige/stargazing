@@ -1,0 +1,98 @@
+body {
+    background-image:url("images/milkeywaytent.jpg");
+    background-size: cover;
+    
+}
+.tent {
+    width: 50px;
+    height: 50px;
+}
+h2 {
+    font-family:fantasy;
+    padding-left: 75px;
+    padding-top: 15px;
+}
+
+.campingImages {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-content: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.carousel{
+    display: flex;
+ 
+}
+
+h1 {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 10px #000000;
+
+}
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: var(--time) transform;
+    cursor: pointer;
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0))
+        translateY(var(--translate-y, 0));
+    height: 250px;
+    width: 250px;
+    margin-top: 100px;
+    padding: 150px;
+    
+
+   
+}
+.card:hover & {
+        
+    transform: rotateX(-180deg);
+
+}
+img {
+   /* height: 290px;
+    width: 290px;
+    margin-left: -10px;
+    */
+    width: 100%;
+    height: auto;
+    size: cover;
+}
+
+
+.card.isFlipped{
+    --rotate-y: 180deg;
+   
+  
+}
+
+.card .card-front {
+   left: 0;
+}
+
+.card .card-front,
+.card .card-back {
+    position: absolute;
+    padding: 1rem;
+    backface-visibility: hidden;
+}
+
+.card .card-back {
+    transform: rotateY(180deg); /*rotates the back side to the front position*/
+   
+}  
+
+
+
