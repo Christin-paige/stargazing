@@ -34,7 +34,11 @@ h1 {
 .card-grid {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 20px;
+    padding: 20px;
+    
     
 }
 .card{
@@ -48,17 +52,20 @@ h1 {
     cursor: pointer;
     transform: perspective(1000px) rotateY(var(--rotate-y, 0))
         translateY(var(--translate-y, 0));
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
     height: 250px;
     width: 250px;
     margin-top: 100px;
     padding: 150px;
-    
+    border: none !important;
+    background-color: #EAF2EF !important;
 
    
 }
-.card:hover & {
+.card:hover  {
         
-    transform: rotateX(-180deg);
+    transform: rotateY(-180deg);
 
 }
 img {
@@ -80,14 +87,33 @@ img {
   
 }
 
+.card-front {
+    height: 100%;
+    width: auto;
+    padding: 0 !important;
+}
+
+.card-image {
+    height: 100%;
+    width: auto;
+    max-width: 300px;
+    object-fit: cover !important;
+}
+
 .card .card-front {
    left: 0;
+}
+
+
+
+.card-back {
+    padding: 1rem;
+    background-color: #EAF2EF;
 }
 
 .card .card-front,
 .card .card-back {
     position: absolute;
-    padding: 1rem;
     backface-visibility: hidden;
 }
 
@@ -96,5 +122,14 @@ img {
    
 }  
 
+.bs-card-border-width {
+    border-width: none !important;
+    padding: 0px !important;
+    display: none;
+}
 
 
+.bs-card-border-color {
+    border-color: transparent !important;
+    display: none;
+}

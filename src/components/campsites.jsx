@@ -20,7 +20,7 @@ const handleClick = (index) => {
         {campsites.map((item, index)=> (
             <div key={index} className={`card ${isFlipped.includes(index) ? "isFlipped" : ""}`}>
                 <div className="card-front" onClick={() => handleClick(index)}>
-                    <img src={item.img} alt="image" style={{ objectFit: 'cover' }} />
+                    <img className="card-image" src={item.img} alt="image" />
                 </div>
                 <div className="card-back" onClick={() => handleClick(index)}>
                     <p>{item.name}</p>
